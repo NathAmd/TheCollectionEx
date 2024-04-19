@@ -13,6 +13,7 @@ body {
   overflow: hidden;
 }
 body header {
+  z-index: 999;
   position: relative;
   width: max;
   height: 5vh;
@@ -97,6 +98,17 @@ body main .AlignLogoPlaylist #LogoPlaylist {
   min-width: 30px;
   padding: 0.5%;
   margin-left: 2vw;
+  scale: 100%;
+  transition: scale 0.1s;
+}
+body main .AlignLogoPlaylist #LogoPlaylist[name=m_cover_play] {
+  scale: 125%;
+}
+body main .AlignLogoPlaylist #LogoPlaylist:hover {
+  scale: 125%;
+}
+body main .AlignLogoPlaylist #LogoPlaylist:hover[name=m_cover_play] {
+  scale: 150%;
 }
 body main .AlignInformation {
   text-align: left;
@@ -272,4 +284,17 @@ body main .Music #MusicAssets:hover {
 .Foot .Player #m_time * {
   margin-left: 1vw;
   margin-right: 1vw;
+}
+.Foot #m_cover {
+  scale: 100%;
+  transition: scale 0.1s;
+}
+.Foot #m_cover[name=m_cover_play] {
+  scale: 125%;
+}
+.Foot #m_cover:hover {
+  scale: 150%;
+}
+.Foot #m_cover:hover[name=m_cover_play] {
+  scale: 175%;
 }/*# sourceMappingURL=styles.css.map */

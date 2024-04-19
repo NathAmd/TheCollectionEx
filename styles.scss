@@ -14,6 +14,7 @@ body{
     overflow: hidden;
 
     header{
+        z-index: 999;
         position: relative;
         width: max;
         height: 5vh;
@@ -132,6 +133,18 @@ body{
             margin: {
                 left: 2vw;
             }
+
+            scale:100%;
+            transition: scale 0.1s;
+                &[name="m_cover_play"] {
+                        scale: 125%;
+                }
+            }
+            #LogoPlaylist:hover{
+                scale: 125%;
+                &[name="m_cover_play"] {
+                        scale: 150%;
+                    }
             }
         }
 
@@ -332,6 +345,26 @@ body{
             font-size: clamp(10px,3vw,15px);
         }
     }
+
+    #m_cover{
+        scale:100%;
+
+        &[name="m_cover_play"] {
+            scale: 125%;
+        }
+
+        transition: scale 0.1s;
+    }
+
+    #m_cover:hover{
+        scale: 150%;
+
+                &[name="m_cover_play"] {
+                        scale: 175%;
+                    }
+    }
+
+
 }
 
 

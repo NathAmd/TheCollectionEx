@@ -18,7 +18,7 @@ var myInterval = setInterval(function () {
     if (lastId != -1 && audio != null) {
         document.getElementById("m_title").textContent = playlist[lastId].title;
         document.getElementById("m_author").textContent = playlist[lastId].artiste;
-        document.getElementById("m_cover").src = playlist[lastId].image;
+        document.getElementById("m_cover_img").src = playlist[lastId].image;
 
         document.getElementById("m_footer").style = "opacity: 1;";
         document.getElementById("m_main").style = "height: 70vh";
