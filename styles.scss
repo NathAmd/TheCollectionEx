@@ -1,0 +1,340 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    ::-webkit-scrollbar {
+    display: none;
+    }
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+body{
+    background-color: rgb(5, 5, 5);
+    overflow: hidden;
+
+    header{
+        position: relative;
+        width: max;
+        height: 5vh;
+        font-size: 2vh;
+        border-radius: 10px 10px 0px 0px;
+
+        color: antiquewhite;
+
+        margin: {
+            left: 2%;
+            right: 2%;
+            top: 2%;
+            bottom: -5.9vh;
+        };
+
+        padding: {
+            left: 1%;
+            right: 1%;
+            top: 0.5vh;
+            bottom: 0.5vh;
+        };
+
+        background-color: rgb(20, 20, 20,0.9);
+    }
+
+    main{
+        overflow-y: scroll;
+
+
+        width: max;
+        height: 0vh;
+
+        transition: height 1s;
+
+        border-radius: 10px;
+
+        margin: {
+                left: 2%;
+                right: 2%;
+            };
+
+        padding: {
+            left: 2%;
+            right: 2%;
+            top: 8vh;
+            bottom: 2%;
+        };
+
+        background-color: rgb(48, 20, 96);
+        background: linear-gradient(180deg, rgba(58, 30, 106) 0%,rgba(20, 20, 20) 75% , rgba(20,20,20) 100%);;
+
+        .PseudoHeader{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: left;
+
+            color: antiquewhite;
+
+            #margin{
+                margin-top: 2%;
+                margin-bottom: 2%;
+                font-weight: 800;
+                width: 60vw;
+
+                img{
+                    width: clamp(25px, 3vw, 50px);
+                }
+            }
+
+            h2{
+                font-size: clamp(20px, 5vw, 40px);
+            }
+            p{
+                font-size: clamp(15px, 3vw, 20px);
+            }
+
+            article{
+                width: 50%;
+
+                margin-right: 5%;
+            }
+
+            #ImgPlaylist{
+                width: 15%;
+                min-width: 100px;
+                img{
+                width: 100%;
+                border-radius: 10px;
+                box-shadow: 0px 0px 50px black;
+            }
+        }
+
+            #ImgProfile{
+                width: 15%;
+                border-radius: 100%;
+                vertical-align: middle;
+            }
+        }
+
+        .AlignLogoPlaylist{
+            display: flex;
+            flex-wrap: wrap;
+
+            margin: {
+                top: clamp(0px,5vw,50px);
+                bottom: clamp(0px, 5vw, 50px);
+            };
+
+            #LogoPlaylist{
+            border: solid 3px black;
+            border-radius: 100%;
+            background-color: rgba(0, 0, 0, 0.1);
+            width: 3vw;
+            min-width: 30px;
+            padding: 0.5%;
+            margin: {
+                left: 2vw;
+            }
+            }
+        }
+
+        .AlignInformation{
+            text-align: left;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+
+            color: beige;
+            border-bottom: solid 1px beige ;
+            
+            padding-bottom: 0.5%;
+            margin-bottom: 1.5%;
+
+            font-size: clamp(15px ,1.2vw, 20px);
+
+            height: clamp(37.5px, 3vw, 60px);
+
+            img{
+                vertical-align: middle;
+                width: 25px;
+            }
+        }
+
+        .Music{
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            
+            
+            //width: 100%;
+            
+            #MusicAssets{
+
+                padding: {
+                    top: 0.5%;
+                    bottom: 0.5%;
+                };
+                
+
+                transition: background-color 0.25s ;
+
+                border-radius: 25px;
+
+                height: clamp(37.5px, 3.4vw, 60px);
+                vertical-align: middle;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content:space-evenly;
+                font-size: clamp(15px, 1.2vw, 25px);
+                color: beige;
+
+                #child_1,#child_2,#child_3,#child_4,#child_5{
+                     padding-top: 5px;
+                 }
+                    
+                    img {
+                        width: clamp(30px, 3vw, 50px);
+                        height:max-content;
+                        border-radius: 5px;
+                    }
+            }
+            #MusicAssets:hover {
+                background-color: rgb(250, 250, 250, 0.25);
+            }
+        }
+    }
+
+}
+
+
+        @media screen and (max-width:720px) {
+
+                #child_1{ width: 10vw;opacity: 1;}
+                #child_2{ width: 60vw;opacity: 1;}
+                #child_3{ width: 0vw;opacity: 0;}
+                #child_4{ width: 0vw;opacity: 0;}
+                #child_5{ width: 10vw;opacity: 1;}
+
+
+
+        .TitreInfo {
+            width: 0vw;
+            opacity: 0;
+            position: absolute;
+        }
+    
+        .Player {
+            width: 60vw;
+        }
+        }
+        
+        @media screen and (min-width:721px) {               
+                #child_1{ width: 1vw;opacity: 1;}
+                #child_2{ width: 30vw;opacity: 1;}
+                #child_3{ width: 20vw;opacity: 1;}
+                #child_4{ width: 8vw;opacity: 1;}
+                #child_5{ width: 1vw;opacity: 1;}
+
+
+        .TitreInfo {
+            position: relative;
+            width: 40vw;
+            opacity: 1;
+        }
+    
+        .Player {
+            width: 40vw;
+        }
+        }
+
+
+        // --------------------------------------------------------- PLAYER
+
+
+#m_footer{
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.Foot{
+    margin: {
+        left: 1vw;
+        right: 1vw;
+        top: 1vh;
+        bottom: 1vh;
+    };
+    width: max;
+    height: 10vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    .TitreInfo{
+        color: rgb(200, 200, 200);
+    
+
+        #Cover{
+            display: flex;
+            flex-wrap: nowrap;
+
+            padding: 1vh;
+            img{
+                //width: clamp(10px, 3vw, 50px);
+                border-radius: 10px;
+                height: clamp(20px, 10vh, 70px);
+            }
+
+
+            #m_title{
+                font-size: clamp(25px, 2vw, 30px);
+                font-weight: 900;
+                width: 30vw;
+            }
+            #m_author{
+                font-size: clamp(20px, 2vw, 25px);
+                width: 30vw;
+            }
+        }
+    }
+
+    .Player{
+        color: rgb(200, 200, 200);
+
+        height: max;
+
+        display: flex;
+        flex-direction: column;
+
+        #m_time, #m_button{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content:center;
+        }
+
+        #m_button{
+            margin-top: 1vh;
+            margin-bottom: 1vh;
+            img{
+                margin-left: 1.5vw;
+                margin-right: 1.5vw;
+
+                width: clamp(15px, 10vw, 30px);
+                border: solid 3px black;
+                border-radius: 100%;
+                background-color: rgba(255, 255, 255, 0.5);
+            }
+        }
+
+        #m_time{
+            *{
+            margin-left: 1vw;
+            margin-right: 1vw;
+            }
+
+            font-weight: 500;
+            font-size: clamp(10px,3vw,15px);
+        }
+    }
+}
+
+
+
+
+

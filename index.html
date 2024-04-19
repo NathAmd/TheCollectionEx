@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+        
+    <title>The collection</title>
+</head>
+<body>
+    <header><h1 name="_title">Nom de la playlist</h1></header>
+
+    <main id="m_main">
+        <div class="PseudoHeader">
+            <article id="ImgPlaylist">
+        <img src="Assets/MixCover.png" >
+            </article>
+            <article>
+        <p id="margin">Playlist</p>
+        <h2 id="margin"><var name="_title">Nom de la playlist</var></h2>
+        <p id="margin"><img src="Assets/Profile.jpg" id="ImgProfile"> <var id="_info"> styloxis . 302 titres</var></p>
+        </article>
+        </div>
+        <div>
+            <div class="AlignLogoPlaylist"><img name="m_cover_play" src="Assets/play_arrow.png" onclick="PlayMusic(-1)" id="LogoPlaylist"><img name="m_random" src="Assets/shuffle.png" onclick="RandomMusic()"  id="LogoPlaylist"><img src="Assets/media_link.png" id="LogoPlaylist"></div>
+            <div class="AlignInformation">
+                <p id="child_1" >#</p>
+                <p id="child_2" >Title</p>
+                <p id="child_3" >Album</p>
+                <p id="child_4" >Year of creation</p>
+                <p id="child_5" style="text-align: center;"><img src="Assets/schedule.png"></p>
+            </div>
+        </div>
+        <div class="Music" id="MusicZone">
+        </div>
+    </main>
+
+    <footer id="m_footer">
+        <article class="Foot">
+
+
+            <div class="TitreInfo">
+                <div id="Cover">
+                    <img id="m_cover" src="Assets/MusicCover/Enemy.jpg">
+                    <div style="margin-left: 5%;">
+                        <p id="m_title">title</p>
+                        <p id="m_author"> author</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="Player">
+                <div id="m_button">
+                    <img id="m_cover" src="Assets/left.png" onclick="PrevMusic()">
+                    <img name="m_cover_play" src="Assets/play_arrow.png" onclick="PlayMusic(-1)">
+                    <img id="m_cover" src="Assets/right.png" onclick="NextMusic()">
+                </div>
+                <div id="m_time">
+                    <p id="m_currenttime">0:00</p>
+                    <p id="m_pourcenttime">----------</p>
+                    <p id="m_musictime">3:00</p>
+                </div>
+            </div>
+
+
+        </article>
+    </footer>
+</body>
+</html>
